@@ -1,0 +1,48 @@
+% lein, clojure
+
+# ancient             Check your projects and profiles for outdated dependencies/plugins.
+lein ancient
+
+# change              Rewrite project.clj by applying a function.
+# check               Check syntax and warn on reflection.
+# classpath           Print the classpath of the current project.
+# clean               Remove all files from project's target-path.
+# cljfmt              Format Clojure source files
+# compile             Compile Clojure source into .class files.
+# deploy              Build and deploy jar to remote repository.
+# deps                Download all dependencies.
+# do                  Higher-order task to perform other tasks in succession.
+# exec                Execute Clojure S-expressions from command-line or scripts.
+# help                Display a list of tasks or help for a given task.
+# install             Install the current project to the local repository.
+# jar                 Package up all the project's files into a jar file.
+# javac               Compile Java source files.
+# kibit
+# midje
+# new                 Generate project scaffolding based on a template.
+# nsorg               Organize ns forms in source files.
+# nu-test
+# plugin              DEPRECATED. Please use the :user profile instead.
+# pom                 Write a pom.xml file to disk for Maven interoperability.
+# postman
+# release             Perform :release-tasks.
+# repl                Start a repl session either with the current project or standalone.
+# retest              Run only the test namespaces which failed last time around.
+# run                 Run a -main function with optional command-line arguments.
+# search              Search Central and Clojars for published artifacts.
+# show-profiles       List all available profiles or display one if given an argument.
+# test                Run the project's tests.
+lein test
+
+# test                Run tests for given namespace..
+lein test :only <namespace>
+
+# trampoline          Run a task without nesting the project's JVM inside Leiningen's.
+# uberjar             Package up the project files and dependencies into a jar file.
+# update-in           Perform arbitrary transformations on your project map.
+# upgrade             Upgrade Leiningen to specified version or latest stable.
+# vcs                 Interact with the version control system.
+# version             Print version for Leiningen and the current JVM.
+# with-profile        Apply the given task with the profile(s) specified.
+
+$ namespace: rg -I "\(ns " | sed 's/(ns //'
