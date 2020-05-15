@@ -1,48 +1,81 @@
 % lein, clojure
 
-# ancient             Check your projects and profiles for outdated dependencies/plugins.
+# Check your projects and profiles for outdated dependencies/plugins.
 lein ancient
 
-# change              Rewrite project.clj by applying a function.
-# check               Check syntax and warn on reflection.
-# classpath           Print the classpath of the current project.
-# clean               Remove all files from project's target-path.
-# cljfmt              Format Clojure source files
-# compile             Compile Clojure source into .class files.
-# deploy              Build and deploy jar to remote repository.
-# deps                Download all dependencies.
-# do                  Higher-order task to perform other tasks in succession.
-# exec                Execute Clojure S-expressions from command-line or scripts.
-# help                Display a list of tasks or help for a given task.
-# install             Install the current project to the local repository.
-# jar                 Package up all the project's files into a jar file.
-# javac               Compile Java source files.
-# kibit
-# midje
-# new                 Generate project scaffolding based on a template.
-# nsorg               Organize ns forms in source files.
-# nu-test
-# plugin              DEPRECATED. Please use the :user profile instead.
-# pom                 Write a pom.xml file to disk for Maven interoperability.
-# postman
-# release             Perform :release-tasks.
-# repl                Start a repl session either with the current project or standalone.
-# retest              Run only the test namespaces which failed last time around.
-# run                 Run a -main function with optional command-line arguments.
-# search              Search Central and Clojars for published artifacts.
-# show-profiles       List all available profiles or display one if given an argument.
-# test                Run the project's tests.
+# Run the project's tests.
 lein test
 
-# test                Run tests for given namespace..
+# Run tests for given namespace.
 lein test :only <namespace>
 
-# trampoline          Run a task without nesting the project's JVM inside Leiningen's.
-# uberjar             Package up the project files and dependencies into a jar file.
-# update-in           Perform arbitrary transformations on your project map.
-# upgrade             Upgrade Leiningen to specified version or latest stable.
-# vcs                 Interact with the version control system.
-# version             Print version for Leiningen and the current JVM.
-# with-profile        Apply the given task with the profile(s) specified.
+# Run midje's tests.
+lein midje
+
+# Run midje's tests for given namespace.
+lein midje <namespace>
+
+# Run the midje autotest, that will run tests in every saved file
+lein midje :autotest
+
+# Run midje's tests for a given filter
+lein midje :filter <filter>
+
+# Run midje's tests for a given namespace and filter
+lein midje <namespace> :filter <filter>
+
+# Install the current project to the local repository.
+lein install
+
+# Check syntax and warn on reflection.
+lein check
+
+# Print the classpath of the current project.
+lein classpath
+
+# Remove all files from project's target-path.
+lein clean
+
+# cljfmt fix lint
+lein do cljfmt fix
+
+# cljfmt check lint
+lein do cljfmt check
+
+# Organize namespaces in all project
+lein do nsorg --replace
+
+# Check for problems in namespace organization
+lein do nsorg
+
+# Higher-order task to perform other tasks in succession.
+lein do <command>
+
+# TODO: compile             Compile Clojure source into .class files.
+# TODO: deploy              Build and deploy jar to remote repository.
+# TODO: deps                Download all dependencies.
+# TODO: exec                Execute Clojure S-expressions from command-line or scripts.
+# TODO: help                Display a list of tasks or help for a given task.
+# TODO: jar                 Package up all the project's files into a jar file.
+# TODO: javac               Compile Java source files.
+# TODO: kibit
+# TODO: new                 Generate project scaffolding based on a template.
+# TODO: nu-test
+# TODO: plugin              DEPRECATED. Please use the :user profile instead.
+# TODO: pom                 Write a pom.xml file to disk for Maven interoperability.
+# TODO: postman
+# TODO: release             Perform :release-tasks.
+# TODO: repl                Start a repl session either with the current project or standalone
+# TODO: retest              Run only the test namespaces which failed last time around.
+# TODO: run                 Run a -main function with optional command-line arguments.
+# TODO: search              Search Central and Clojars for published artifacts.
+# TODO: show-profiles       List all available profiles or display one if given an argument.
+# TODO: trampoline          Run a task without nesting the project's JVM inside Leiningen's.
+# TODO: uberjar             Package up the project files and dependencies into a jar file.
+# TODO: update-in           Perform arbitrary transformations on your project map.
+# TODO: upgrade             Upgrade Leiningen to specified version or latest stable.
+# TODO: vcs                 Interact with the version control system.
+# TODO: version             Print version for Leiningen and the current JVM.
+# TODO: with-profile        Apply the given task with the profile(s) specified.
 
 $ namespace: rg -I "\(ns " | sed 's/(ns //'
