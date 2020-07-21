@@ -1,0 +1,14 @@
+% monitors manager
+
+# Turn off one monitor
+xrandr --output <inputs_1> --off
+
+# Turn on one monitor
+xrandr --output <inputs_1> --on
+
+# Split screen with two monitors
+xrandr --output <inputs_1> --auto --<directions>-of <inputs_2>
+
+$ inputs_1: xrandr | rg nnected | cut -d' ' -f1
+$ inputs_2: xrandr | rg nnected |rg -v $inputs_1 | cut -d' ' -f1
+$ directions: echo "right left" | tr ' ' '\n'
