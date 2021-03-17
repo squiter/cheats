@@ -1,0 +1,7 @@
+% navi
+
+# Reload squiter's public cheats
+navi repo add git@github.com:squiter/cheats.git
+
+# Reload squiter's private cheats
+navi repo add git@github.com:squiter/private-cheats.git
