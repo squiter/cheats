@@ -1,0 +1,7 @@
+% nix, nixos
+
+# Search for packages at nixpkgs
+nix-env -qaP '*' --description | rg -i <package-name>
+
+# Apply NixOS new configurations
+sudo nixos-rebuild switch
