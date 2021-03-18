@@ -1,0 +1,10 @@
+% gpg, gnupg
+
+# Encrypt files with your keys
+gpg --output <file>.gpg --encrypt --recipient <email> <file>
+
+# Decrypt file
+gpg --output <encrypted_with_no_gpg_extension> --decrypt <encrypted_with_no_gpg_extension>.gpg
+
+$ file: ls | tr ' ' '\n'
+$ encrypted_with_no_gpg_extension: ls *.gpg | sed 's/\.gpg//g'
