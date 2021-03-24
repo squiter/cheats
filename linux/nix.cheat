@@ -1,7 +1,22 @@
 % nix, nixos
 
-# Search for packages at nixpkgs
+# Search for packages at nixpkgs by description
 nix-env -qaP '*' --description | rg -i <package-name>
+
+# Search for packages
+nix-env -qaP '.*<package-name>.*'
+
+# Search for packages - using search
+nix search <package-name>
+
+# Update the list of packages
+sudo nix-channel --update
+
+# Check for broken dependencies
+nix-store --verify --check-contents
+
+# Verify all installed packages
+sudo nix-store --verify --check-contents
 
 # Apply NixOS new configurations
 sudo nixos-rebuild switch
