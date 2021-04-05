@@ -1,0 +1,4 @@
+% gnome, utils
+
+# Gnome Control Center - Forcing env to open in i3
+env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
