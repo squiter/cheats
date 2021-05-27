@@ -1,0 +1,11 @@
+% xdg
+
+# Look for the mimetype of a file
+xdg-mime query filetype <file>
+
+# Set the new program to open a file, open with
+xdg-mime default <program> <mimetype>
+
+$ file: ls
+$ program: ls /run/current-system/sw/share/applications | tr ' ' '\n'
+$ mimetype: xdg-mime query filetype "<file>"
