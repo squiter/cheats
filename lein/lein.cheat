@@ -6,6 +6,12 @@ lein ancient
 # Run the project's tests.
 lein test
 
+# Run kaocha tests for given namespace.
+lein kaocha --focus <namespace>
+
+# Run the project's kaocha tests.
+lein kaocha
+
 # Run tests for given namespace.
 lein test :only <namespace>
 
