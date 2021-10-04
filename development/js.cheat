@@ -1,6 +1,6 @@
 % js, javascript, typescript, react, development
 
-# Run prettier on a file
+# Run prettier on a particular/specific file
 yarn prettier --write <preetier_compatible_file>
 
 # Run prettier on all files
@@ -9,8 +9,9 @@ yarn prettier --write '{src,cypress}/**/**.{js,jsx,ts,tsx,json,css,md}'
 # Run all tests
 yarn test
 
-# Run a test for a particular file
-yarn test <preetier_compatible_file>
+# Run a test for a particular/specific file
+yarn test <preetier_compatible_test_file>
 
 $ preetier_compatible_file: find . -iregex '.*\.\(js\|jsx\|ts\|tsx\|json\|css\|md\)$'
+$ preetier_compatible_test_file: find . -iregex '.*\.test\.\(js\|jsx\|ts\|tsx\)$'
 $ dirs_with_ts_files: find . -iregex '.*\.\(js\|jsx\|ts\|tsx\|json\|css\|md\)$' | sed -r 's#/[^/]+$##' | sort | uniq
