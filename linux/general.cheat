@@ -1,0 +1,4 @@
+% linux, general
+
+# List font names in the format you can use in other apps like terminals
+fc-list | cut -d':' -f2
