@@ -6,5 +6,9 @@ gpg --output <file>.gpg --encrypt --recipient <email> <file>
 # Decrypt file
 gpg --output <encrypted_with_no_gpg_extension> --decrypt <encrypted_with_no_gpg_extension>.gpg
 
+# Export public key
+gpg --export -a <available_public_keys> > public.key
+
 $ file: ls | tr ' ' '\n'
 $ encrypted_with_no_gpg_extension: ls *.gpg | sed 's/\.gpg//g'
+$ available_public_keys: gpg --list-keys | rg uid | sed 's/uid.*<\(.*\)>/\1/'
