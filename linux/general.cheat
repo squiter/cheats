@@ -2,3 +2,8 @@
 
 # List font names in the format you can use in other apps like terminals
 fc-list | cut -d':' -f2
+
+# Get list of directories by its size (find biggest directories)
+sudo du -sx <base_directory>* 2>/dev/null | sort -n
+
+$ base_directory: echo "/ ~/" | tr ' ' '\n'
