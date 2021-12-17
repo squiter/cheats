@@ -1,0 +1,4 @@
+% dig, dns
+
+# Get the nameservers of a domain
+dig +noall +answer ns <domain-name>
