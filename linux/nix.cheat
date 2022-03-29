@@ -26,3 +26,8 @@ sudo nixos-rebuild dry-build
 
 # Update the channels and run the Rebuild
 sudo nix-channel --update && sudo nixos-rebuild switch
+
+# Find a binary at Nix Store
+readlink $(which <binaries>)
+
+$ binaries: ls /run/current-system/sw/bin/ $HOME/.nix-profile/bin/
