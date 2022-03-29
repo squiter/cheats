@@ -23,3 +23,6 @@ sudo nixos-rebuild switch
 
 # Dry build to check what will be updated by the rebuild switch
 sudo nixos-rebuild dry-build
+
+# Update the channels and run the Rebuild
+sudo nix-channel --update && sudo nixos-rebuild switch
